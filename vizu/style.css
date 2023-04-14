@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* color: wheat; */
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(55, 23px);
+  /* background-color: black; */
+  /* border: 1px solid red; */
+}
+
+.notFound {
+  /* background-color: rgb(8, 45, 50); */
+  /* background-color: rgba(255, 45, 41, 0.6); */
+  background-color: rgb(8, 45, 50, 0.8);
+  /* background-color: rgb(29, 37, 37, 0.9); */
+}
+
+.cell {
+  height: 23px;
+  width: 23px;
+  border: 1px solid rgba(0, 43, 78, 0.5);
+  text-align: center;
+}
+.start {
+  width: 10px;
+  height: 10px;
+}
+.visiting {
+  /* background-color: #ff6200; */
+  background-color: rgb(255, 106, 0);
+  transition: background-color 0.4s ease-in;
+  /* animation: animate 900ms ease-in; */
+}
+.found {
+  /* background-color: rgba(0, 255, 17, 0.4); */
+  /* background-color: rgb(255, 255, 100); */
+  background-color: rgba(255, 255, 87, 0.9);
+}
+.visited {
+  background-color: rgba(0, 190, 218, 0.7);
+  transition: background-color 0.5s ease-in;
+  /* animation: ani 1200ms both; */
+}
+
+.yellow {
+  background-color: rgb(255, 255, 100, 0.9);
+  /* border: yellow; */
+  transition: background-color step-end;
+  animation: finalPath 100ms both;
+}
+.block {
+  background-color: rgb(8, 45, 50);
+  /* background-color: rgb(20, 26, 26); */
+  /* background-color: rgb(30, 44, 44); */
+
+  /* border: 1px solid rgba(51, 123, 132, 0.1); */
+  transition: background-color step-end;
+  animation: block 350ms both;
+
+  /* border: 1px solid rgb(43, 54, 58); */
+}
+.weight {
+  /* background-color: #ff9500; */
+  display: grid;
+  align-items: center;
+  background-image: url("icons/weight.png");
+  background-size: contain;
+  animation: weight 350ms both;
+
+  /* height: 23px; */
+  /* width: 23px; */
+  /* background-repeat: no-repeat; */
+}
+
+.green {
+  background-color: rgba(0, 255, 17, 0.4);
+  display: grid;
+  align-items: center;
+  background-image: url("icons/flag.png");
+  /* height: 23px; */
+  /* width: 23px; */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.red {
+  background-color: rgba(255, 45, 41, 0.6);
+  display: grid;
+  align-items: center;
+  background-image: url("icons/flag.png");
+  height: 23px;
+  width: 23px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@keyframes block {
+  0% {
+    transform: scale(0.95);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    /* border-radius: 60%; */
+    /* background-color: rgb(8, 45, 50); */
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    /* background-color: rgb(8, 45, 50); */
+  }
+}
+@keyframes weight {
+  0% {
+    transform: scale(0.1);
+  }
+  25% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+    /* border-radius: 60%; */
+    /* background-color: rgb(8, 45, 50); */
+  }
+  75% {
+    transform: scale(1.06);
+  }
+  100% {
+    transform: scale(1);
+    /* background-color: rgb(8, 45, 50); */
+  }
+}
+@keyframes finalPath {
+  0% {
+    transform: scale(0.95);
+    border-color: yellow;
+  }
+  25% {
+    transform: scale(1);
+    border-color: yellow;
+  }
+  50% {
+    transform: scale(1.05);
+    border-color: yellow;
+
+    /* border-radius: 60%; */
+    /* background-color: rgb(8, 45, 50); */
+  }
+  75% {
+    transform: scale(1.1);
+    border-color: yellow;
+  }
+  100% {
+    transform: scale(1);
+    /* background-color: rgb(8, 45, 50); */
+  }
+}
+@keyframes animate {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(41, 4, 24, 0.75);
+    border-radius: 60%;
+  }
+
+  50% {
+    background-color: rgba(97, 0, 20, 0.75);
+  }
+
+  75% {
+    transform: scale(1);
+    background-color: rgba(216, 5, 141, 0.75);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(178, 67, 255, 0.75);
+  }
+}
+@keyframes ani {
+  0% {
+    transform: scale(0.3);
+    background-color: rgba(0, 0, 66, 0.75);
+    border-radius: 50%;
+  }
+
+  50% {
+    background-color: rgba(17, 104, 217, 0.75);
+  }
+
+  75% {
+    transform: scale(1.1);
+    background-color: rgba(0, 217, 159, 0.75);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(0, 190, 218, 0.75);
+  }
+}
