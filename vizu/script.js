@@ -1,59 +1,5 @@
 ("use strict");
 
-// let o1 = { i: 2, j: 2 };
-// let o2 = { i: 2, j: 2 };
-// let o3 = { o1: o2, o2: o1 };
-// console.log(o3);
-//Implement speeds
-//show "weighted and guarentees shortest path"
-/*
-1)if target is not found links are stayed disable
-fix:Activate them if target is not found
-
-2)exactly after s and d are selected and again clicking on s makes it exactlys
-
-wtf is wrong
-3)bootstrap hamburger not working(for navbar)
-4)cannot implemet dropdown using bootstrap 
-*/
-
-//User can move start and target
-//show path length and visited size
-//show grid according to user device
-//Implement remove weight and remove wall
-//disable all while traversing
-//when target is found make the cell big
-//remove different speeds
-//while yellow block is moving make sure it should look like only head is moving
-// wall color  rgb(43, 54, 58);
-//implement greedy bfs
-//understand pq class
-//represent weight,wall,visited,visiting on nav bar
-//understand bibfs
-//implement better navbar
-//understand navbar bootstrap
-//understand keyframes
-//how icon is added
-//how about implementing start and target by default and user can drag and place it where ever he(menemporium) wants
-//bomb node?
-//generating walls?
-//how prev working in bfs and dijkstras dfs
-//how const works objects and normal diff
-//in dfs when calling highlight path in settimeout function why path and visited are becoming empty and why spread opeartor is used
-//clear grid and clear path
-//why import and require are not working
-//Make it work on every devise
-//optimise code
-//Give it to someone and ask for any bugs or any changes(Visual) and ask them to test
-//Deploy
-
-// const PriorityQueue = require("js-priority-queue");
-// import PriorityQueue from "js-priority-queue";
-
-//
-// import { getPrimes } from "/modules/getPrimes.js";
-
-// import js-PriorityQueue;
 class PriorityQueue {
   constructor() {
     this.queue = [];
